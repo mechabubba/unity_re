@@ -12,12 +12,20 @@ but atm it is so unfinished
 """
 
 def handle_convert_particle_systems(args):
-    # idk do somethin
-    # will prob only allow this to take in one unity file at a time
-    print("@todo make the attachment")
-    pass
+    if args.target.is_dir():
+        print("error: one file at a time")
+        sys.exit(1)
+    if not args.class_name:
+        print("error: no m_Name provided. provide this for the ParticleSystem :)")
+        sys.exit(1)
+    
+    convert_particle_systems(args.target, args.class_name)
 
-def convert_particle_systems(class_name):
+def convert_particle_systems(target, class_name):
+    print("loading unity document...")
+    global doc # hacky but whatever
+    doc = UnityDocument.load_yaml(target)
+
     entries = doc.filter(class_names=("GameObject",), attributes=("m_Name",))
     for entry in entries:
         if entry.m_Name == "Stars": # this is the parent gameobject

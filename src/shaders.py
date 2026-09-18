@@ -24,7 +24,6 @@ def handle_find_shaders(args):
     else:
         targets.append(args.target)
     
-    print(targets)
     guids = Util.map_guids(root, flat=True)
     find_shaders(targets, guids, root)
 
