@@ -7,6 +7,7 @@ import sys
 
 from shaders import handle_find_shaders
 from particles import handle_convert_particle_systems
+from uid_discontinuities import handle_uid_discontinuities
 
 COMMANDS = {
     "find-shaders": {
@@ -32,6 +33,10 @@ COMMANDS = {
                 "help": "The object name to search for."
             }
         ]
+    },
+    "find-uid-discontinuities": {
+        "desc": "Finds discontinuities in GameObject ID's. Useful to see what the Unity serializer removes on save. No dirs, unityyaml only. Values are inclusive.",
+        "aliases": ["find_uid_discontinuities", "uid-discontinuities", "uid_discontinuities", "uids"]
     }
 }
 
@@ -84,6 +89,9 @@ def main():
 
         case "convert-particle-systems":
             handle_convert_particle_systems(args)
+
+        case "find-uid-discontinuities":
+            handle_uid_discontinuities(args)
 
 if __name__ == "__main__":
     main()

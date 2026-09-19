@@ -14,7 +14,7 @@ def handle_find_shaders(args):
     targets = []
     root = args.target.parent if not args.target.is_dir else args.target
 
-    if args.target.is_dir:
+    if args.target.is_dir():
         if not args.recurse:
             print("no")
             sys.exit(1)
