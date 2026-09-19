@@ -9,4 +9,4 @@ porting old decompiled unity projects is hard. since i started i've been continu
 a lot of the functionality is use-specific and half baked. it may not be for you; i don't know what i'm really doing. but i do hope it could be useful. if you fork this and fix something, please submit a pr or atleast link your fork in an issue so this can get improved...
 
 ## deps
-requires `unityparser` to parse unity yaml
+requires `unityparser` to parse unity yaml; https://pypi.org/project/unityparser/

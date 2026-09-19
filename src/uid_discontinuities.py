@@ -1,3 +1,4 @@
+import sys
 from unityparser import UnityDocument
 
 def handle_uid_discontinuities(args):

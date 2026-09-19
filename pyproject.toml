@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unity_re"
+version = "0.0.1"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "unityparser"
+]
+
+[project.scripts]
+unity_re = "main:main"

@@ -35,7 +35,7 @@ COMMANDS = {
         ]
     },
     "find-uid-discontinuities": {
-        "desc": "Finds discontinuities in GameObject ID's. Useful to see what the Unity serializer removes on save. No dirs, unityyaml only. Values are inclusive.",
+        "desc": "Finds discontinuities in GameObject ID's. Useful to see what the Unity serializer removes on save. No dirs, unityyaml only. Values are inclusive. Useful to see what the Unity serializer is removing.",
         "aliases": ["find_uid_discontinuities", "uid-discontinuities", "uid_discontinuities", "uids"]
     }
 }
